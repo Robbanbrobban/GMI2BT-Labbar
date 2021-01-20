@@ -3,20 +3,19 @@ from random import randint
 
 def gissnings_game():
     nummer = randint(0, 100)
-    print('----------------------------')
     mitt_namn = input('Hej, vad heter du? ')
     print(f'Dåså, {mitt_namn} jag tänker på ett tal mellan 1 och 100.\nVilket? ')
     antal_gissningar = 0
     while True: 
         while True: 
             try:
-                gissa = nummer_testaren()
+                gissa = int(input())
                 if gissa >= 1 and gissa <= 100:
                     break
                 else:
                     print('Du skrev inte ett tal mellan 1 och 100, Försök igen')
             except ValueError:
-                    print('Skriv ett tal')
+                    print('Något blev fel, skriv ett tal istället')
                     continue                
         if gissa == nummer:
             antal_gissningar = str(antal_gissningar)
