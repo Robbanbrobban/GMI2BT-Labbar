@@ -66,7 +66,7 @@ def save_file(json_modified_path):
 def delete_person(json_path):
     data_append = []
     user_input = None
-    print('Vill du verkligen ta bort någon skriv j annars skriv n för att gå tillbaka till menyn: ')
+    print('Vill du verkligen ta bort någon skriv j för ja annars skriv n för nej för att gå tillbaka till menyn: ')
     while user_input not in ("j","n"):
         user_input = input()
         if user_input.lower() == "j":
@@ -96,17 +96,22 @@ def delete_person(json_path):
 
 def save_json():
     if os.path.isfile(json_new_path) == True:
-        user_input = input('Är du säker på att du vill spara filen ja/nej: ')
-        if user_input.upper() == 'J':
-            with open (json_new_path, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-                input('Din fil är nu sparad')
-            save_file(json_start_file)
-            delete_file()
-            with open(json_start_file, 'w', encoding='utf-8') as file:
-                json.dump(data, file, indent=4, ensure_ascii=False)
-        elif user_input.upper() == 'N':
-            return input('Tryck enter för att gå tillbaka till menyn')
+        user_input = None
+        input('Är du säker på att du vill spara filen skriv j för ja eller n för nej: ')
+        while user_input not in ("j","n"):
+            user_input = input()
+            if user_input.lower() == 'j':
+                with open (json_new_path, 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    input('Din fil är nu sparad')
+                save_file(json_start_file)
+                delete_file()
+                with open(json_start_file, 'w', encoding='utf-8') as file:
+                    json.dump(data, file, indent=4, ensure_ascii=False)
+            elif user_input.lower() == 'n':
+                return input('Tryck enter för att gå tillbaka till menyn')
+            else:
+                print("skriv j eller n, försök igen")
     else:
         return input('Finns ingen sparad fil\nTryck enter för att gå tillbaka till menyn')
      
@@ -124,6 +129,6 @@ def check_nums(max_value):
         except ValueError:
             print('Skriv ett heltal, tack')
 def go_back():
-    input('\nTryck på valfri knapp för att komma tillbaka till menyn')
+    input('\nTryck på valfri enter för att komma tillbaka till menyn')
 def homepage():
     print('|                           |')
