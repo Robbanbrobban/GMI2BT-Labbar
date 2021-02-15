@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Väderdata</title>
+    <meta name="description" content="Väder" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/stylesheets/form.css">
+
+</head>
+
+<body>
+    <div class="Wrapper">
+        <h1>Väderinformation</h1>
+        <h2><a href="http://127.0.0.1:5000/delete">Tryck här för att ta bort</a></h2>
+        <main class="main">
+            <div class="form">
+                <div class="form_fieldset">
+                    <table class="table">
+
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Tid</th>
+                                <th>Sensor</th>
+                                <th>Temperatur</th>
+                                <th>Fuktighet</th>
+                                <th>Tryck (hPa)</th>
+                                <th>vind (m/s)</th>
+                            </tr>
+                        </thead>
+                        {% for row in w_data %}
+                        <!-- Loopar för att kolla dicten  -->
+                        <tr>
+                            {% for info in row %}
+                            <!--skriver ut info i varje row ifrån wdata -->
+                            <td>{{ info }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

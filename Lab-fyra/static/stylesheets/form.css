@@ -1,0 +1,169 @@
+html {
+    background-color: rgba(162, 173, 231, 0.986);
+}
+
+body {
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.header__headline {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 1.34rem;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 2.5% 5% 2.5% 5%;
+}
+
+abbr {
+    color: red;
+}
+
+.form__group>label {
+    display: flex;
+    flex-direction: row;
+}
+
+.form__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.form__heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 20px;
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+}
+
+.form__info {
+    color: red;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+select {
+    width: 60%;
+    height: 40px;
+    outline: none;
+}
+
+.form__segment {
+    display: flex;
+    justify-content: center;
+    background-color: transparent
+}
+
+.form__toppings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__toppingitems {
+    list-style-type: none;
+}
+
+ul {
+    margin: 5px 0px 8px 0px;
+    padding: 0px;
+}
+
+.form__allergies {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+fieldset {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    flex-grow: 1;
+    height: 30px;
+    border-radius: 0.5rem;
+    margin-left: 5px;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.form__group>label {
+    width: 30%;
+}
+
+.form__group>select {
+    flex-grow: 1;
+}
+
+.form__ephitet {
+    color: rgb(30, 12, 129);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Indie Flower', cursive;
+}
+
+.form__delivery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form__admission {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__account {
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.form__button,
+.form__login {
+    background-color: rgba(183, 173, 228, 0.527);
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    outline: none;
+    width: 40%;
+}
+
+textarea {
+    max-width: 480px;
+    width: 70%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}

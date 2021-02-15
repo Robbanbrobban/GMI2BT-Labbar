@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <meta name="description" content="Register test site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/stylesheets/form.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Medlemsuppgifter</h1>
+        <main class="main">
+            <div class="form">
+                <table class="table">
+                    {% for key, value in result.items() %}
+                    <tr>
+                        <th>{{key}}</th>
+                        <td>{{value}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

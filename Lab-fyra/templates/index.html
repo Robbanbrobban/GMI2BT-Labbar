@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <meta name="description" content="Register test site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/stylesheets/form.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__headline">Welcome to my test</h1>
+    </header>
+    <main>
+        <form method="POST" action="http://localhost:5000/register">
+            <header class="form__header">
+                <h2 class="form__heading">Subscribe</h2>
+                <p class="form__info">Required fields are followed by <strong>*</strong></p>
+            </header>
+            <div class="form__segment">
+                <fieldset class="form__personal">
+                    <legend class="form__ephitet">Personal information</legend>
+                    <p class="form__group">
+                        <label for="firstName">First Name:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="text" id="firstName" name="Förnamn" placeholder="Name" required>
+                    </p>
+                    <p class="form__group">
+                        <label for="lastName">Last Name:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="text" id="lastName" name="Efternamn" placeholder="Lastname" required>
+                    </p>
+                    <p class="form__group">
+                        <label for="adress">Order adress:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="text" id="adress" name="Adress" placeholder="Zipcode, Country" required>
+                    </p>
+                    <p class="form__group">
+                        <label for="mail">E-mail adress:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="email" id="mail" name="E-Mail" placeholder="adress@mail.com" required>
+                    </p>
+                    <p class="form__group">
+                        <label for="pwd">Password:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="password" id="pwd" name="Lösenord" placeholder="Password" required>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="form__segment">
+                <fieldset class="form__payment">
+                    <legend class="form__ephitet">Payment information</legend>
+                    <p class="form__group">
+                        <label for="card_type">Card Type:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <select name="Kort" id="card_type">
+                            <option value="Visa">VISA</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </p>
+                    <p class="form__group">
+                        <label for="Number">Card Number:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="text" id="Number" name="Kortnummer" placeholder="0112-3581-3213-4556 &#128179;" required>
+                    </p>
+                    <p class="form__group">
+                        <label for="date">Expiration date:
+                            <strong><abbr>*</abbr></strong>
+                        </label>
+                        <input class="form__input" type="date" id="date" name="MM/YY" required>
+                    </p>
+                    <p class="form__group">
+                        <label>Dina kommentarer:</label>
+                        <textarea class="form_text" cols="40" rows="3" name="Kommentar"></textarea>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="form__segment form__admission">
+                <button class="form__button" type="reset">Reset</button>
+                <button class="form__button" type="submit">Subscribe</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

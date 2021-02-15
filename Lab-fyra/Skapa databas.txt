@@ -1,0 +1,11 @@
+Ny databas
+   -- SQLite
+DROP TABLE IF EXISTS SensorData;
+CREATE TABLE IF NOT EXISTS SensorData (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    sensor VARCHAR(30) NOT NULL,
+    temperature VARCHAR(10),
+    humidity VARCHAR(10),
+    pressure VARCHAR(10),
+    wind VARCHAR(10));
